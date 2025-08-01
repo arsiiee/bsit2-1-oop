@@ -11,7 +11,6 @@ public class inputNumber {
             total += number;
         }
 
-        // display total
         System.out.println("\nTotal Number: " + total);
 
         input.close();
