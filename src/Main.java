@@ -1,4 +1,4 @@
-class Main {
+ class Main {
     String title;
     String author;
     int pages;
@@ -36,7 +36,7 @@ class Main {
     public static void main(String[] args) {
         Main book1 = new Main("Babel", "R.F. Kuang", 544);
         Main book2 = new Main("The Hobbit", "J.R.R. Tolkien", 310);
-        Main book3 = new Main("1984", "George Orwell", 328);
+        Main book3 = new Main("Her Radiant Curse", "Elizabeth Lim", 432);
 
         System.out.println();
         book1.displayInfo();
