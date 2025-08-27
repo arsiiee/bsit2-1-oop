@@ -1,3 +1,39 @@
+public static void main(String[] args) {
+        PostManager pm = new PostManager();
+
+        // Sample Post
+        String postTitle = "Java Programming Tips";
+        int engagementScore = pm.calculateEngagement(150, 75, 25); // likes, comments, shares
+        String category = pm.getCategoryRating(engagementScore);
+
+        // Display using both overloaded methods
+        pm.displayPostStats(postTitle, engagementScore);
+        System.out.println();
+        pm.displayPostStats(postTitle, engagementScore, category);
+
+        System.out.println("\n--- Hashtags ---");
+        String[] hashtags = {"#java", "#coding", "#programming", "#java", "#tips"};
+        ArrayList<String> uniqueHashtags = pm.manageHashtags(hashtags);
+        System.out.println("Unique Hashtags: " + uniqueHashtags);
+
+        System.out.println("\n--- Trending Posts ---");
+        ArrayList<String> posts = new ArrayList<>();
+        posts.add("Java Programming Tips");
+        posts.add("Python Tricks");
+        posts.add("Daily Motivation");
+
+        HashMap<String, Integer> engagements = new HashMap<>();
+        engagements.put("Java Programming Tips", engagementScore);
+        engagements.put("Python Tricks", 800);
+        engagements.put("Daily Motivation", 40);
+
+        LinkedList<String> trending = pm.findTrendingPosts(posts, engagements);
+        System.out.println("Trending Posts: " + trending);
+
+        System.out.println("\n--- Unique Authors ---");
+        HashSet<String> authors = pm.getUniqueAuthors("Alice", "Bob", "Alice", "Charlie", "Bob");
+        System.out.println("Unique Authors: " + authors);
+    }
 import java.util.Scanner;
 
 public class Main {
